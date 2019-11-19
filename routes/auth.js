@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Ajv = require('ajv');
-const key = require('../config/key');
 const ajv = new Ajv();
+const key = require('../config/key');
 const userSchema = require('../schemas/user.js');
 const {CreateUser} = require('../controllers/userController.js');
 const {LoginOne} = require('../controllers/userController.js');

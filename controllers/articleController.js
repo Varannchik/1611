@@ -1,13 +1,25 @@
 const ArticleModel = require('../models/article');
 
-module.exports.CreateArt = async (name, text, title)=> {   
+module.exports.CreateArticle = async (title, text, userId)=> {   
     try {            
-        const article = await ArticleModel ({name, text, title});
+        const article = await ArticleModel ({title, text, userId});
         const data = await article.save();
         console.log(data);
-            return data;
+        return data;
     }     
     catch(err) {
-            console.log(err);
+        console.log(err);
     }    
-}
+};
+
+module.exports.ShowAllArticles = async ()=> {   
+    try {            
+        const data = await ArticleModel.find({});
+        if (data) {
+            return data;
+        }
+    }     
+    catch(err) {
+        console.log(err);
+    }    
+};

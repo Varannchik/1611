@@ -1,7 +1,6 @@
 {
   "name": "1611",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon httpServer.js"
@@ -16,6 +15,18 @@
     "eslint": "^6.6.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.7.11"
-  }
+    "mongoose": "^5.7.3",
+    "mongoose-auto-increment": "^5.0.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Varannchik/1611.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Varannchik/1611/issues"
+  },
+  "homepage": "https://github.com/Varannchik/1611#readme",
+  "description": ""
 }

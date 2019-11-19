@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  h2 Login
+  form(action='/add' method='post')
+    input(type='text' name='title' placeholder='title of the article')
+    input(type='text' name='text' placeholder='text of the article')
+    input(type="submit" value="Submit")

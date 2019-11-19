@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const autoIncrement = require('mongoose-auto-increment');
+
 const articleSchema = new mongoose.Schema({
     text: {
         type: String,
@@ -7,24 +9,16 @@ const articleSchema = new mongoose.Schema({
     title: {
         type: String,
         require: true
-    },
-    name: {
+    },   
+    userId: {
         type: String,
-        require: true
+        required: true
     },
-    user_id: {
-        type: mongoose.Schema.Types.ObjectId,    
-        ref: 'User'
-    },
-    published: {
-        type: String,
-        require: true
-    },
-    comment_id: {
-        type: mongoose.Schema.Types.ObjectId,    
-        ref: 'Coment'
-    } 
+   
 
 });
+
+articleSchema.plugin(autoIncrement.plugin, 'Article');
+
 const Model = mongoose.model('article', articleSchema);
 module.exports = Model;
